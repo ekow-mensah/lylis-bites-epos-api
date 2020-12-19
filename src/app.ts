@@ -6,9 +6,7 @@ import cors from 'cors';
 import {routes} from './routes/index';
 
 /* mongoose connection */
-const connectionString = "mongodb+srv://admin:H2AaoC9JGb1Ca6EE"
-  + "@lylis-bites-cluster.ucwb7.mongodb.net/LBDB_TEST1"
-  + "?retryWrites=true&w=majority";
+const connectionString = "[ConnectionString];
 
 mongoose.connect(connectionString, {
   useCreateIndex: true,
