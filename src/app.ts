@@ -3,10 +3,13 @@ import { json } from 'body-parser';
 import mongoose from 'mongoose';
 import helmet from 'helmet';
 import cors from 'cors';
+import dotenv from 'dotenv';
 import {routes} from './routes/index';
 
+const config = dotenv.config();
+
 /* mongoose connection */
-const connectionString = "[ConnectionString];
+const connectionString = process.env.DB_URL;
 
 mongoose.connect(connectionString, {
   useCreateIndex: true,
